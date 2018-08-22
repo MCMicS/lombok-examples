@@ -8,7 +8,7 @@ package com.intive;
 import lombok.Data;
 
 @Data
-public class Intive {
+public class Company {
 
     private String url;
 }
