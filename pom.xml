@@ -13,6 +13,13 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
                 <configuration>
+                    <!--<annotationProcessorPaths>-->
+                        <!--<path>-->
+                            <!--<groupId>org.projectlombok</groupId>-->
+                            <!--<artifactId>lombok</artifactId>-->
+                            <!--<version>${org.projectlombok.version}</version>-->
+                        <!--</path>-->
+                    <!--</annotationProcessorPaths>-->
                     <failOnWarning>true</failOnWarning>
                     <release>${jdk.version}</release>
                     <showDeprecation>true</showDeprecation>
@@ -21,18 +28,6 @@
                     <target>${jdk.version}</target>
                     <verbose>true</verbose>
                 </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.1.1</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                        <phase>package</phase>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.projectlombok</groupId>
@@ -51,12 +46,6 @@
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct-processor</artifactId>
-            <version>1.2.0.Final</version>
-            <scope>provided</scope>
-        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
