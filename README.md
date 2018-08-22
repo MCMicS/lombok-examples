@@ -1,18 +1,26 @@
-# jdeps-error-with-lombok
+# lombok-issue-1572-jdk10-sources-not-generated
 
-Replicates the following [jdeps](https://docs.oracle.com/javase/9/tools/jdeps.htm) (Java class dependency analyzer) error caused by [Lombok](https://projectlombok.org).
+Refers to an [1572 issue](https://github.com/rzwitserloot/lombok/issues/1572) reported in the [Lombok GitHub](https://github.com/rzwitserloot/lombok/issues). 
+
+Considers the following problem:
 
 ```
-java.lang.module.ResolutionException: Module lombok does not read a module that exports org.mapstruct.ap.spi
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/tomasz.zieleniewski/Desktop/tmp/jdeps-error-with-lombok/src/main/java/com/intive/Main.java:[14,16] cannot find symbol
+  symbol:   method setUrl(java.lang.String)
+  location: variable company of type com.intive.Company
+[ERROR] /C:/Users/tomasz.zieleniewski/Desktop/tmp/jdeps-error-with-lombok/src/main/java/com/intive/Main.java:[15,35] cannot find symbol
+  symbol:   method getUrl()
+  location: variable company of type com.intive.Company
 ```
-
-A problem was reported in the [Lombok GitHub issue](https://github.com/rzwitserloot/lombok/issues/1806).
 
 ## Steps to reproduce
 
 ```bash
-$ git clone https://github.com/tzieleniewski/jdeps-error-with-lombok.git
-$ cd jdeps-error-with-lombok
+$ git clone https://github.com/tzieleniewski/lombok-examples.git
+$ cd lombok-examples
+$ git checkout lombok-issue-1572-jdk10-sources-not-generated
 $ mvn clean package
-$ jdeps --module-path target/dependency -R target/jdeps-error-with-lombok-1.0.0-SNAPSHOT.jar
 ```
