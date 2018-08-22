@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.intive</groupId>
-    <artifactId>jdeps-error-with-lombok</artifactId>
+    <artifactId>lombok-examples</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <build>
@@ -23,18 +23,6 @@
                 </configuration>
             </plugin>
             <plugin>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.1.1</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                        <phase>package</phase>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok-maven-plugin</artifactId>
                 <version>1.18.0.0</version>
@@ -51,12 +39,6 @@
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct-processor</artifactId>
-            <version>1.2.0.Final</version>
-            <scope>provided</scope>
-        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -81,8 +63,8 @@
     </properties>
 
     <scm>
-        <connection>scm:git:ssh://github.com/tzieleniewski/jdeps-error-with-lombok.git</connection>
-        <developerConnection>scm:git:ssh://github.com/tzieleniewski/jdeps-error-with-lombok.git</developerConnection>
+        <connection>scm:git:ssh://github.com/tzieleniewski/lombok-examples.git</connection>
+        <developerConnection>scm:git:ssh://github.com/tzieleniewski/lombok-examples.git</developerConnection>
     </scm>
 
 </project>

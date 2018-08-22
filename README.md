@@ -1,18 +1,21 @@
-# jdeps-error-with-lombok
+The master branch contains the skeleton for Lombok examples.
 
-Replicates the following [jdeps](https://docs.oracle.com/javase/9/tools/jdeps.htm) (Java class dependency analyzer) error caused by [Lombok](https://projectlombok.org).
+# lombok-examples
+
+Refers to []() 
+
+Considers
 
 ```
-java.lang.module.ResolutionException: Module lombok does not read a module that exports org.mapstruct.ap.spi
+...
 ```
 
-A problem was reported in the [Lombok GitHub issue](https://github.com/rzwitserloot/lombok/issues/1806).
-
-## Steps to reproduce
+## Steps to follow
 
 ```bash
-$ git clone https://github.com/tzieleniewski/jdeps-error-with-lombok.git
-$ cd jdeps-error-with-lombok
+$ git clone https://github.com/tzieleniewski/lombok-examples.git
+$ cd lombok-examples
+$ git checkout ..
 $ mvn clean package
-$ jdeps --module-path target/dependency -R target/jdeps-error-with-lombok-1.0.0-SNAPSHOT.jar
+$ java --module-path target/lombok-examples-1.0.0-SNAPSHOT.jar -m com.intive/com.intive.Main
 ```
