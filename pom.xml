@@ -27,8 +27,8 @@
                     <release>${jdk.version}</release>
                     <verbose>true</verbose>
                     <compilerArgs>
-                        <arg>--processor-module-path</arg>
-                        <arg>"P:\Maven Repository\repo\org\projectlombok\lombok\${org.projectlombok.version}\lombok-${org.projectlombok.version}.jar;"</arg>
+                        <!--<arg>&#45;&#45;processor-module-path</arg>-->
+                        <!--<arg>"P:\Maven Repository\repo\org\projectlombok\lombok\${org.projectlombok.version}\lombok-${org.projectlombok.version}.jar;"</arg>-->
                         <arg>-verbose</arg>
                         <arg>-XprintRounds</arg>
                         <arg>-XprintProcessorInfo</arg>
@@ -38,26 +38,26 @@
 
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok-maven-plugin</artifactId>
-                <version>1.18.0.0</version>
-                <executions>
-                    <execution>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>delombok</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <dependencies>
-                <dependency>
-                    <groupId>org.projectlombok</groupId>
-                    <artifactId>lombok</artifactId>
-                    <version>${org.projectlombok.version}</version>
-                </dependency>
-            </dependencies>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>org.projectlombok</groupId>-->
+                <!--<artifactId>lombok-maven-plugin</artifactId>-->
+                <!--<version>1.18.0.0</version>-->
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<phase>generate-sources</phase>-->
+                        <!--<goals>-->
+                            <!--<goal>delombok</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
+                <!--<dependencies>-->
+                <!--<dependency>-->
+                    <!--<groupId>org.projectlombok</groupId>-->
+                    <!--<artifactId>lombok</artifactId>-->
+                    <!--<version>${org.projectlombok.version}</version>-->
+                <!--</dependency>-->
+            <!--</dependencies>-->
+            <!--</plugin>-->
             <!--<plugin>-->
             <!--<artifactId>maven-dependency-plugin</artifactId>-->
             <!--<version>3.1.1</version>-->
