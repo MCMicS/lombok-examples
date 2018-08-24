@@ -14,19 +14,28 @@
                 <version>3.8.0</version>
                 <configuration>
                     <!--<annotationProcessorPaths>-->
-                        <!--<path>-->
-                            <!--<groupId>org.projectlombok</groupId>-->
-                            <!--<artifactId>lombok</artifactId>-->
-                            <!--<version>${org.projectlombok.version}</version>-->
-                        <!--</path>-->
+                    <!--<path>-->
+                    <!--<groupId>org.projectlombok</groupId>-->
+                    <!--<artifactId>lombok</artifactId>-->
+                    <!--<version>${org.projectlombok.version}</version>-->
+                    <!--</path>-->
                     <!--</annotationProcessorPaths>-->
                     <failOnWarning>true</failOnWarning>
                     <release>${jdk.version}</release>
                     <showDeprecation>true</showDeprecation>
                     <showWarnings>true</showWarnings>
-                    <source>${jdk.version}</source>
-                    <target>${jdk.version}</target>
+                    <release>${jdk.version}</release>
                     <verbose>true</verbose>
+                    <compilerArgs>
+                        <arg>--processor-module-path</arg>
+                        <arg>"P:\Maven Repository\repo\org\projectlombok\lombok\${org.projectlombok.version}\lombok-${org.projectlombok.version}.jar;"</arg>
+                        <arg>-verbose</arg>
+                        <arg>-XprintRounds</arg>
+                        <arg>-XprintProcessorInfo</arg>
+                        <arg>-Xlint</arg>
+                        <arg>-J-verbose</arg>
+                    </compilerArgs>
+
                 </configuration>
             </plugin>
             <plugin>
@@ -41,7 +50,26 @@
                         </goals>
                     </execution>
                 </executions>
+                <dependencies>
+                <dependency>
+                    <groupId>org.projectlombok</groupId>
+                    <artifactId>lombok</artifactId>
+                    <version>${org.projectlombok.version}</version>
+                </dependency>
+            </dependencies>
             </plugin>
+            <!--<plugin>-->
+            <!--<artifactId>maven-dependency-plugin</artifactId>-->
+            <!--<version>3.1.1</version>-->
+            <!--<executions>-->
+            <!--<execution>-->
+            <!--<goals>-->
+            <!--<goal>copy-dependencies</goal>-->
+            <!--</goals>-->
+            <!--<phase>package</phase>-->
+            <!--</execution>-->
+            <!--</executions>-->
+            <!--</plugin>-->
         </plugins>
     </build>
 
@@ -50,6 +78,12 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${org.projectlombok.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+            <version>1.2.0.Final</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
