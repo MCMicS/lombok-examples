@@ -81,8 +81,8 @@
     </properties>
 
     <scm>
-        <connection>scm:git:ssh://github.com/tzieleniewski/jdeps-error-with-lombok.git</connection>
-        <developerConnection>scm:git:ssh://github.com/tzieleniewski/jdeps-error-with-lombok.git</developerConnection>
+        <connection>scm:git:ssh://github.com/tzieleniewski/lombok-examples.git</connection>
+        <developerConnection>scm:git:ssh://github.com/tzieleniewski/lombok-eamples.git</developerConnection>
     </scm>
 
 </project>
