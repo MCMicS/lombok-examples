@@ -61,7 +61,7 @@
                             <!--<goal>delombok</goal>-->
                         <!--</goals>-->
                     <!--</execution>-->
-                <!--</executions>-->
+            <!--</executions>-->
                 <!--<dependencies>-->
                 <!--<dependency>-->
                     <!--<groupId>org.projectlombok</groupId>-->
@@ -111,7 +111,7 @@
 
     <properties>
         <jdk.version>10</jdk.version>
-        <org.projectlombok.version>1.18.2</org.projectlombok.version>
+        <org.projectlombok.version>1.18.3</org.projectlombok.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <org.mapstruct.version>1.2.0.Final</org.mapstruct.version>
     </properties>
