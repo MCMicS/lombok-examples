@@ -13,22 +13,6 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
                 <configuration>
-                    <!--<annotationProcessorPaths>-->
-                    <!--<path>-->
-                    <!--<groupId>org.projectlombok</groupId>-->
-                    <!--<artifactId>lombok</artifactId>-->
-                    <!--<version>${org.projectlombok.version}</version>-->
-                    <!--</path>-->
-                    <!--</annotationProcessorPaths>-->
-
-                    <!--<annotationProcessorPaths>-->
-                        <!--<path>-->
-                            <!--<groupId>org.mapstruct</groupId>-->
-                            <!--<artifactId>mapstruct-processor</artifactId>-->
-                            <!--<version>${org.mapstruct.version}</version>-->
-                        <!--</path>-->
-                    <!--</annotationProcessorPaths>-->
-
                     <failOnWarning>true</failOnWarning>
                     <source>${jdk.version}</source>
                     <target>${jdk.version}</target>
@@ -39,7 +23,6 @@
                     <verbose>true</verbose>
                     <compilerArgs>
                         <arg>--processor-module-path</arg>
-                        <!--<arg>P:\Maven Repository\repo\org\projectlombok\lombok\${org.projectlombok.version}\lombok-${org.projectlombok.version}.jar;</arg>-->
                         <arg>P:\Maven Repository\repo\org\projectlombok\lombok\${org.projectlombok.version}\lombok-${org.projectlombok.version}.jar;P:\Maven Repository\repo\org\mapstruct\mapstruct-processor\1.2.0.Final\mapstruct-processor-1.2.0.Final.jar;</arg>
                         <arg>-verbose</arg>
                         <arg>-XprintRounds</arg>
